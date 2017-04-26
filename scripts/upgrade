@@ -17,9 +17,9 @@ local_path=${local_path:-/var/www/$app}
 export iface=$(ynh_app_setting_get $app iface)
 iface=${iface:-$(ip r|awk '/default/ { print $5 }')}
 export port=$(ynh_app_setting_get $app port)
-port=${port:-1194}
+port=${port:-53}
 export ip4ranges=$(ynh_app_setting_get $app ip4ranges)
-ip4ranges=${ip4ranges:-10.0.0.8/24}
+ip4ranges=${ip4ranges:-10.128.0.8/24}
 export dynamic_ip=$(ynh_app_setting_get $app dynamic_ip)
 dynamic_ip=${dynamic_ip:-false}
 
