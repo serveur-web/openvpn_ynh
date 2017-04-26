@@ -125,7 +125,7 @@ setup_and_restart () {
     ynh_save_args gateway_ip4 gateway_mask
 
     # Open port in firewall
-    sudo yunohost firewall allow UDP $port > /dev/null 2>&1
+    sudo yunohost firewall allow TCP $port > /dev/null 2>&1
 
     # Create user
     ynh_system_user_create "$user" "/etc/openvpn/"
